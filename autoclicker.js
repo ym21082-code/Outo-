@@ -1,0 +1,1 @@
+javascript:(function(){let t=prompt("連打間隔(ms)を入力\n(例: 100 = 0.1秒)","100");if(!t||isNaN(t))return;alert("【準備OK】\n連打したい場所をクリックしてください。\n(停止はF5キー)");document.addEventListener("click",function(e){e.preventDefault();e.stopImmediatePropagation();let el=e.target;console.log("Target:",el);setInterval(()=>{el.click()},t)},{capture:true,once:true})})();
